@@ -1,10 +1,45 @@
+// variables
+/// menu
+$sidebar-width: 250px;
+
 body{
     margin: 0px;
     font-size: 20px;
 }
 
-.versionStats {
-    position: absolute;
-    bottom: 0px;
+@mixin bar {
+    position: sticky;
     padding: 4px;
+}
+
+.versionStats {
+    @include bar;
+    bottom: 0;
+}
+
+.topBar {
+    @include bar;
+    min-height: 30px;
+    border-bottom: 2px solid red;
+    p { margin: 0; }
+}
+
+.sideBar {
+    position: absolute;
+    display: inline-block;
+    left: 0;
+    border-right: 2px solid blue;
+    min-width: $sidebar-width;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    p { margin: 0; }
+}
+
+.inputField {
+    display: inline-block;
+    width: max;
+    height: max;
+    margin-left: $sidebar-width + 5px;
+    h1, h2, h3, h4, h5, h6 { margin: 0; }
 }

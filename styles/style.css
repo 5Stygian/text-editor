@@ -4,7 +4,41 @@ body {
 }
 
 .versionStats {
-  position: absolute;
-  bottom: 0px;
+  position: sticky;
   padding: 4px;
+  bottom: 0;
+}
+
+.topBar {
+  position: sticky;
+  padding: 4px;
+  min-height: 30px;
+  border-bottom: 2px solid red;
+}
+.topBar p {
+  margin: 0;
+}
+
+.sideBar {
+  position: absolute;
+  display: inline-block;
+  left: 0;
+  border-right: 2px solid blue;
+  min-width: 250px;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+.sideBar p {
+  margin: 0;
+}
+
+.inputField {
+  display: inline-block;
+  width: max;
+  height: max;
+  margin-left: 255px;
+}
+.inputField h1, .inputField h2, .inputField h3, .inputField h4, .inputField h5, .inputField h6 {
+  margin: 0;
 }/*# sourceMappingURL=style.css.map */
